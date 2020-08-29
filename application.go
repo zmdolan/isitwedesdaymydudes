@@ -27,4 +27,5 @@ func home(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/", home)
 	log.Fatal(http.ListenAndServe(":5000", nil))
+	//beanstalk forwards traffic to ec2 via port 5000, change to 8080 for localhost testing
 }
